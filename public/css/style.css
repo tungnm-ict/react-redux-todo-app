@@ -41,7 +41,12 @@ p {
 .input-error{
     border: solid #C0392B 2px;
 }
-.btn-delete {
+.btn-right {
+    border: solid white 2px;
+    float: right;
+    overflow: auto;
+}
+.btn-danger {
     background:#F06E6C;
 }
 .btn-cancel {

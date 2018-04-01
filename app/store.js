@@ -1,7 +1,7 @@
-var redux = require('redux');
-var reducer = require('reducer'); 
+import {createStore, compose} from 'redux';
+import reducer from 'reducer'; 
 
-var store = redux.createStore(reducer,redux.compose(
+var store = createStore(reducer,compose(
     window.devToolsExtension?window.devToolsExtension(): f => f
 ));
 
