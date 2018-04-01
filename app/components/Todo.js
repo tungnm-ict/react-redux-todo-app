@@ -17,7 +17,7 @@ class Todo extends React.Component {
                 <p>{this.props.children}</p>
                 <button className="btn-danger"
                     onClick={this.removeTodo.bind(this)}>x DELETE</button>
-                <button className={this.props.completed?'btn-right':'btn-right btn-danger'}
+                <button className={this.props.completed?'btn-right btn-primary':'btn-right btn-danger'}
                     onClick={this.toggleTodo.bind(this)}>{this.props.completed?'COMPLETED':'ACTIVE'}</button>
             </div>
         )

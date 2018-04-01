@@ -14,6 +14,8 @@ module.exports = {
             List: path.resolve(__dirname, 'app/components/List.js'),
             Todo: path.resolve(__dirname, 'app/components/Todo.js'),
             TodoForm: path.resolve(__dirname, 'app/components/TodoForm.js'),
+            Filter: path.resolve(__dirname, 'app/components/Filter.js'),
+            FilterLink: path.resolve(__dirname, 'app/components/FilterLink.js'),
         }
     },
     module: {

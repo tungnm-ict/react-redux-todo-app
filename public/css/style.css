@@ -23,7 +23,7 @@ button {
     outline: none;
     margin: 5px;
     border: none;
-    background: #16A085;
+    background:#181C2D;
     border-radius: 5px;
     padding: 6px;
     color: white;
@@ -46,11 +46,26 @@ p {
     float: right;
     overflow: auto;
 }
+.btn-primary {
+    background:#16A085;
+}
 .btn-danger {
     background:#F06E6C;
 }
 .btn-cancel {
     background:#202535;
+}
+.btn-link {
+    background:#202535;
+    border:  solid #F5B058 2px;
+    color: F5B058;
+    padding: 2px 6px;
+}
+.btn-active {
+    background:#F5B058;
+    border:  solid #F5B058 2px;
+    color:white;
+    padding: 2px 6px;
 }
 .todo-list {
     background:#292D3E;

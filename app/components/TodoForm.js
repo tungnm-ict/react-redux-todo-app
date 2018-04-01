@@ -27,12 +27,12 @@ class TodoForm extends React.Component {
             <form onSubmit={this.handleSubmit.bind(this)}>
                 <div className="div-error">{this.props.errors}</div>
                 <input autoFocus type="text" placeholder="Enter todo title" className={this.props.errors?'input-error':''} ref={ (input) => {this.txtInput= input;}}/><br/>
-                <button>ADD</button>
+                <button className="btn-primary">ADD</button>
                 <button onClick={this.toggle.bind(this)} className="btn-cancel">CANCEL</button>
             </form>
         )
 
-        return <button onClick={this.toggle.bind (this)}>+ ADD</button>
+        return <button className="btn-primary" onClick={this.toggle.bind (this)}>+ ADD</button>
     }
 }
 
