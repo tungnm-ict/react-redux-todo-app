@@ -6,3 +6,5 @@ ReactDOM.render(
     <List/>,
     document.getElementById('root')
 );
+
+var store = require('./store');
