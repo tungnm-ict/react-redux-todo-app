@@ -9,10 +9,16 @@ class List extends React.Component {
         }
     }
 
+    remove(index){
+        this.state.todoLists.splice(index,1);
+        this.setState(this.state);
+    }
+
     render() {
         return (
             <div>
-                {this.state.todoLists.map((todo,index) => <Todo key={index} index={index} >{todo} </Todo> )}
+                {this.state.todoLists.map((todo,index) =>
+                 <Todo key={index} index={index} handleRemove={this.remove.bind(this)}>{todo} </Todo> )}
             </div>
         )
     }
