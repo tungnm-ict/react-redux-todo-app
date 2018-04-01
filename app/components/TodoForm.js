@@ -23,11 +23,12 @@ class TodoForm extends React.Component {
         if(this.state.isAdding) return (
             <form onSubmit={this.handleSubmit.bind(this)}>
                 <input type="text" placeholder="Enter todo title" ref="txt"/><br/>
-                <button>Add</button>
+                <button>ADD</button>
+                <button onClick={this.toggle.bind(this)} className="btn-cancel">CANCEL</button>
             </form>
         )
 
-        return <button onClick={this.toggle.bind(this)}>+</button>
+        return <button onClick={this.toggle.bind(this)}>+ ADD</button>
     }
 }
 

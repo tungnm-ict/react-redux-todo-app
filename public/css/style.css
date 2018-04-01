@@ -1,0 +1,60 @@
+body{
+    margin: 0 auto;
+    background-color:#1d1d1d; 
+    padding: 20px;
+}
+#wrap{
+    margin: auto;
+    width: 300px;
+}
+input {
+    margin: 5px;
+    background: #181C2D;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: #F5B058;
+    font-size: medium;
+    width: 260px;
+}
+button {
+    margin: 5px;
+    border: none;
+    background: #16A085;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+}
+p {
+    margin: 5px 5px 5px 10px;
+
+}
+.btn-delete {
+    background:#F06E6C;
+}
+.btn-cancel {
+    background:#202535;
+}
+.todo-list {
+    background:#292D3E;
+    padding: 10px;
+    border-radius: 5px;
+}
+.todo {
+    margin: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 5px;
+    color: #F5B058;
+    border: solid #9b9b9b 1px;
+}
+h2 {
+    margin: 10px;
+    color: #16A085;
+    text-align: center;
+}
+h5 {
+    margin: 10px;
+    color: #777;
+    text-align: center;
+}

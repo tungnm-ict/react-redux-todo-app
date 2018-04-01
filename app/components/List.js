@@ -22,10 +22,12 @@ class List extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="todo-list">
+                <h2> Todos List</h2>
                 <TodoForm handleAdd={this.add.bind(this)}/>
                 {this.state.todoLists.map((todo,index) =>
                  <Todo key={index} index={index} handleRemove={this.remove.bind(this)}>{todo} </Todo> )}
+                 <h5>Copyright@ tungnm.ict</h5>
             </div>
         )
     }

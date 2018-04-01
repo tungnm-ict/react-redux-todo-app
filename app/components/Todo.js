@@ -7,10 +7,10 @@ class Todo extends React.Component {
     }
     render() {
         return (
-            <div>
+            <div className="todo">
                 <p>{this.props.children}</p>
-                <button
-                    onClick={this.removeTodo.bind(this)}>Delete</button>
+                <button className="btn-delete"
+                    onClick={this.removeTodo.bind(this)}>x Delete</button>
             </div>
         )
     }
