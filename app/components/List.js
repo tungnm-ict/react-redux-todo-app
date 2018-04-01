@@ -1,14 +1,9 @@
 import React from 'react';
 import Todo from './Todo';
 import TodoForm from './TodoForm';
+import {connect} from 'react-redux';
 
 class List extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            todoLists: ['ReactJs', 'Redux', 'React Native']
-        }
-    }
 
     remove(index){
         this.state.todoLists.splice(index, 1);
@@ -25,7 +20,7 @@ class List extends React.Component {
             <div className="todo-list">
                 <h2> Todos List</h2>
                 <TodoForm handleAdd={this.add.bind(this)}/>
-                {this.state.todoLists.map((todo,index) =>
+                {this.props.todoLists.map((todo,index) =>
                  <Todo key={index} index={index} handleRemove={this.remove.bind(this)}>{todo} </Todo> )}
                  <h5>Copyright@ tungnm.ict</h5>
             </div>
@@ -33,4 +28,6 @@ class List extends React.Component {
     }
 }
 
-module.exports = List;
+module.exports = connect(function(state) {
+    return {todoLists: state.todoLists}
+})(List);
