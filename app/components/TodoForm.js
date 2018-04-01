@@ -1,35 +1,41 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {toggleIsAdding, addTodo, errors} from 'action';
 
 class TodoForm extends React.Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {isAdding: false }
-    }
-
     handleSubmit(e){
         e.preventDefault();
-        this.props.handleAdd(this.refs.txt.value);
-        this.refs.txt.value = "";
-        this.toggle();
+        var {dispatch} = this.props;
+        var todo =this.txtInput.value;
+        if(todo){
+            dispatch(addTodo(todo));
+            this.toggle();
+        }else {
+            dispatch(errors('Please enter todo title '));
+        }
     }
 
     toggle(){
-        this.state.isAdding= !this.state.isAdding;
-        this.setState(this.state);
+        var {dispatch} = this.props;
+        dispatch(toggleIsAdding());
+        dispatch(errors(''));
     }
 
     render() {
-        if(this.state.isAdding) return (
+        if(this.props.isAdding) return (
             <form onSubmit={this.handleSubmit.bind(this)}>
-                <input type="text" placeholder="Enter todo title" ref="txt"/><br/>
+                <div className="div-error">{this.props.errors}</div>
+                <input autoFocus type="text" placeholder="Enter todo title" className={this.props.errors?'input-error':''} ref={ (input) => {this.txtInput= input;}}/><br/>
                 <button>ADD</button>
                 <button onClick={this.toggle.bind(this)} className="btn-cancel">CANCEL</button>
             </form>
         )
 
-        return <button onClick={this.toggle.bind(this)}>+ ADD</button>
+        return <button onClick={this.toggle.bind (this)}>+ ADD</button>
     }
 }
 
-module.exports = TodoForm;
+module.exports = connect((state) => {
+    return {isAdding: state.isAdding, errors:state.errors}
+})(TodoForm);

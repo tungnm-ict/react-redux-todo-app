@@ -1,9 +1,11 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {removeTodo} from 'action';
 
 class Todo extends React.Component {
     removeTodo() {
-        var {index, handleRemove} = this.props;
-        handleRemove(index);
+        var {index, dispatch} = this.props;
+        dispatch(removeTodo(index));
     }
     render() {
         return (
@@ -16,4 +18,4 @@ class Todo extends React.Component {
     }
 }
 
-module.exports = Todo;
+module.exports = connect()(Todo);

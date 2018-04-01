@@ -7,6 +7,7 @@ body{
     margin: auto;
     width: 300px;
 }
+
 input {
     margin: 5px;
     background: #181C2D;
@@ -16,8 +17,10 @@ input {
     color: #F5B058;
     font-size: medium;
     width: 260px;
+    outline: none;
 }
 button {
+    outline: none;
     margin: 5px;
     border: none;
     background: #16A085;
@@ -25,9 +28,18 @@ button {
     padding: 6px;
     color: white;
     min-width: 50px;
+    font-weight: bold;
 }
 p {
     margin: 5px 5px 5px 10px;
+}
+.div-error {
+    margin: 0px 5px;
+    padding: 2px 5px;
+    color: #C0392B;
+}
+.input-error{
+    border: solid #C0392B 2px;
 }
 .btn-delete {
     background:#F06E6C;
