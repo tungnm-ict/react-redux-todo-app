@@ -9,7 +9,7 @@ var todoListsReducer =  (state = initialState, action) => {
         case "ADD_TODO":
             return [...state, {text: action.todo, completed: false }]
         case "REMOVE_TODO":
-            return state.filter((todo, index) => i != action.index)
+            return state.filter((todo, index) => index != action.index)
         case "TOGGLE_TODO":
             return state.map((todo, index) => {
                 if (index === action.index) {
